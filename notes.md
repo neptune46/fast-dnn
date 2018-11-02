@@ -1,0 +1,6 @@
+# notes
+
+## build opencv
+```dos
+cmake -DCMAKE_GENERATOR_PLATFORM=x64 -DINSTALL_CREATE_DISTRIB=ON -DWITH_FFMPEG=ON -DBUILD_EXAMPLES=ON ..\code
+```
