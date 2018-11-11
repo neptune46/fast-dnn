@@ -12,7 +12,7 @@ pip install tensorflow keras
 python test.py
 ```
 
-### generate h5 format model fistryly, then convert to pb format model
+### generate h5 format model firstly, then convert to pb format model
 ```cmd
 python test2.py
 python keras_to_tensorflow.py --input_model data/mnist.h5 --output_model=data/mnist.pb
