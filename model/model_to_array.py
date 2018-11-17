@@ -3,34 +3,35 @@ from tensorflow.python.platform import gfile
 from tensorflow.python.framework import tensor_util
 
 def saveList(f, l):
-  f.write("{\n")
   for x in l:
     f.write(str(x)+", \n")
-  f.write("},\n")
 
 def save1D(f, l, name):
   dim = "["+ str(len(l)) + "]"
-  f.write("float " + name + dim + " = \n")
+  f.write("static float " + name + dim + " = \n")
+  f.write("{\n")
   saveList(f, l)
+  f.write("};\n\n")
 
 def save2D(f, ll, name):
   dim = "["+ str(len(ll)) + "]" + "["+ str(len(ll[0])) + "]"
-  f.write("float " + name + dim + " = {\n")
+  f.write("static float " + name + dim + " = {\n")
   for l in ll:
+    f.write("{\n")
     saveList(f, l)
-  f.write("}\n")
+    f.write("},\n")
+  f.write("};\n\n")
 
 def dumpArray(name, array):
   a = name.split('/')
   arrayname = a[0] + "_" + a[1]
-  filename = arrayname + ".cpp"
+  filename = "model_data.h"
   l = array.tolist()
-  with open(filename, 'w+') as f:
+  with open(filename, 'a') as f:
     if len(array.shape) == 1:
       save1D(f, l, arrayname)
     elif len(array.shape) == 2:
       save2D(f, l, arrayname)
-    f.close()
   print(arrayname)
 
 GRAPH_PB_PATH = "data\\mnist.pb" #path to your .pb file
