@@ -1,2 +1,2 @@
 # fast-dnn
-the fastest dnn inference engine
+fast dnn inference engine
