@@ -157,7 +157,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="model_data.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="test_data.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="opencv_forward.cpp" />
