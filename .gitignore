@@ -1,6 +1,10 @@
 *.user
-
 model/*.h
+
 test/opencv_forward_dnn/.vs
 test/opencv_forward_dnn/x64
 test/opencv_forward_dnn/opencv_forward/x64
+
+test/forward_dnn/.vs
+test/forward_dnn/x64
+test/forward_dnn/forward_dnn/x64
