@@ -1,2 +1,6 @@
-model/*.h
+*.user
 
+model/*.h
+test/opencv_forward_dnn/.vs
+test/opencv_forward_dnn/x64
+test/opencv_forward_dnn/opencv_forward/x64
