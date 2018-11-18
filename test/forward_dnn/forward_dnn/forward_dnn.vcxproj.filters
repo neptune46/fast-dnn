@@ -27,6 +27,9 @@
     <ClInclude Include="mnist_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="perf_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -36,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mnist_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="perf_util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
