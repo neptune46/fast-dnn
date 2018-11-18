@@ -26,6 +26,7 @@ public:
     ~Mnist();
 
     int getTestData(int index, char** data, char* label);
+    void mergeImage();
 
 private:
     std::string imageFileName_ = "t10k-images.idx3-ubyte";

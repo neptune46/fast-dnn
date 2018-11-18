@@ -66,3 +66,43 @@ int Mnist::getTestData(int index, char** data, char* label)
     return 0;
 }
 
+void Mnist::mergeImage()
+{
+    if (testImages_.size() != 10000)
+    {
+        return;
+    }
+    int index = 0;
+    char *buf, *dst;
+    buf = new char[28 * 28 * 100 * 100];
+    if (!buf)
+    {
+        return;
+    }
+
+    for (int y = 0; y < 100; y++)
+    {
+        for (int x = 0; x < 100; x++)
+        {
+            index = y * 100 + x;
+            dst = buf + y * (28 * 28 * 100) + x * 28;
+            for (int j=0; j<28; j++)
+            {
+                for (int i=0; i<28; i++)
+                {
+                    dst[j * 28 * 100 + i] = testImages_[index]->data[j][i];
+                }
+            }
+        }
+    }
+    std::ofstream outfile;
+    outfile.open("merge.yuv", std::ios::binary);
+    if (outfile.is_open())
+    {
+        outfile.write(buf, 28 * 100 * 28 * 100);
+        outfile.close();
+    }
+
+    delete[] buf;
+}
+
