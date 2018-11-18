@@ -163,12 +163,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="mnist_data.h" />
     <ClInclude Include="model_data.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="test_data.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="forward_dnn.cpp" />
+    <ClCompile Include="mnist_data.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

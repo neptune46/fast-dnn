@@ -24,12 +24,18 @@
     <ClInclude Include="test_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mnist_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="forward_dnn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mnist_data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
