@@ -95,10 +95,10 @@ int forward_cpuref(Mnist* mnist)
         }
         stat.totalCount++;
     }
-    cout << endl << "CPU ref done with " << stat.totalCount << " images." << endl;
+    cout << "CPU ref done with " << stat.totalCount << " images." << endl;
 
     double rate = (double)stat.passCount / (double)stat.totalCount;
-    cout << "pass rate = " << rate << endl;
+    cout << "pass rate = " << rate << endl << endl;
 
     return 0;
 }
@@ -135,10 +135,10 @@ int forward_opencv(Mnist* mnist)
         }
         stat.totalCount++;
     }
-    cout << endl << "OpenCV done with " << stat.totalCount << " images." << endl;
+    cout << "OpenCV done with " << stat.totalCount << " images." << endl;
 
     double rate = (double)stat.passCount / (double)stat.totalCount;
-    cout << "pass rate = " << rate << endl;
+    cout << "pass rate = " << rate << endl << endl;
 
     return 0;
 }
