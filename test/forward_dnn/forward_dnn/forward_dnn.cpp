@@ -7,7 +7,6 @@
 
 #include "model_data.h"
 #include "mnist_data.h"
-#include "test_data.h"
 #include "perf_util.h"
 
 #include <opencv2/dnn.hpp>

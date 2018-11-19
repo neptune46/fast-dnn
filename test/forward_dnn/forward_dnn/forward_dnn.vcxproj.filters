@@ -21,9 +21,6 @@
     <ClInclude Include="model_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="test_data.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="mnist_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
