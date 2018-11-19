@@ -7,7 +7,7 @@
         {
             "name": "Python: Current File (Integrated Terminal)",
             "pythonPath": "${config:python.pythonPath}",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/model",
             "type": "python",
             "request": "launch",
             "program": "${file}",

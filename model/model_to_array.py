@@ -34,7 +34,7 @@ def dumpArray(name, array):
       save2D(f, l, arrayname)
   print(arrayname)
 
-GRAPH_PB_PATH = "data\\mnist.pb" #path to your .pb file
+GRAPH_PB_PATH = "mnist.pb" #path to your .pb file
 with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as sess:
   print("load graph")
   with gfile.FastGFile(GRAPH_PB_PATH,'rb') as f:
@@ -50,8 +50,8 @@ with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as sess:
       print ("Name of the node - %s" % n.name)
       tensor1 = n.attr['value'].tensor
       array1 = tensor_util.MakeNdarray(tensor1)
-      print (array1.shape, array1.size)
-      if (array1.size > 1):
-        dumpArray(n.name, array1)
+      array2 = array1.transpose()
+      if (array2.size > 1):
+        dumpArray(n.name, array2)
 
 print('done')
