@@ -109,7 +109,7 @@ int forward_opencv(Mnist* mnist)
     PassRate stat = {};
     Net net = readNet("mnist.pb", "", "tensorflow");
     net.setPreferableBackend(0);
-    net.setPreferableTarget(0);
+    net.setPreferableTarget(1);
 
     int index = 0;
     char *data, label, result;
