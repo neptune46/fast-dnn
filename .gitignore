@@ -4,3 +4,5 @@ model/*.h
 test/forward_dnn/.vs
 test/forward_dnn/x64
 test/forward_dnn/forward_dnn/x64
+test/forward_dnn/forward_dnn/t10k-images.idx3-ubyte
+test/forward_dnn/forward_dnn/t10k-labels.idx1-ubyte
