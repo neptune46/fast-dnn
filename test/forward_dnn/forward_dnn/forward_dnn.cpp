@@ -49,7 +49,7 @@ int cpuref_image(unsigned char* img)
         result1[y] = dense_bias[y];
         for (int x = 0; x < 784; x++)
         {
-            result1[y] += ((float)img[x] / (float)255.0) * dense_kernel[x][y];
+            result1[y] += ((float)img[x] / (float)255.0) * dense_kernel[y][x];
         }
         result1[y] = (result1[y] < 0) ? 0 : result1[y];
     }
@@ -61,7 +61,7 @@ int cpuref_image(unsigned char* img)
         result2[y] = dense_1_bias[y];
         for (int x = 0; x < 128; x++)
         {
-            result2[y] += result1[x] * dense_1_kernel[x][y];
+            result2[y] += result1[x] * dense_1_kernel[y][x];
         }
         exp2[y] = exp(result2[y]);
         sum2 += exp2[y];
