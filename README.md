@@ -8,4 +8,4 @@ fast dnn inference engine
 | opencv-cpu       | 10000     | 0.04         | 0.02     | 58.85    |
 | opencv-gpu-nv    | 10000     | 0.81         | 0.53     | 14.31    |
 | opencv-gpu-intel | 10000     | 1.18         | 0.78     | 19.91    |
-
+| cpuref-forward   | 10000     | 0.73         | 0.52     | 90.73    |
