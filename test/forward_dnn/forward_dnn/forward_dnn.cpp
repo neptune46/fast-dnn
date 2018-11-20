@@ -105,6 +105,19 @@ int forward_cpuref(Mnist* mnist)
     return 0;
 }
 
+int forward_gpu(Mnist* mnist)
+{
+    OclEngine engine;
+
+    if (engine.create(CL_DEVICE_TYPE_GPU, "Intel") != 0)
+    {
+        printf("ERROR: failed to create OpenCL engine\n");
+        return -1;
+    }
+
+    return 0;
+}
+
 int forward_opencv(Mnist* mnist)
 {
     PassRate stat = {};
@@ -148,11 +161,12 @@ int forward_opencv(Mnist* mnist)
 int main()
 {
     Mnist mnist;
-    //mnist.mergeImage();
 
-    forward_opencv(&mnist);
+    //forward_opencv(&mnist);
 
-    forward_cpuref(&mnist);
+    //forward_cpuref(&mnist);
+
+    forward_gpu(&mnist);
 
     return 0;
 }
