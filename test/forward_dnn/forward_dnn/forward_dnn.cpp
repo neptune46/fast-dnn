@@ -8,10 +8,12 @@
 #include "model_data.h"
 #include "mnist_data.h"
 #include "perf_util.h"
+#include "ocl_device.h"
 
 #include <opencv2/dnn.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
+
 
 using namespace cv;
 using namespace dnn;
