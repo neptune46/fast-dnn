@@ -209,3 +209,8 @@ int OclEngine::create(cl_device_type deviceType, const char* platformName)
     return 0;
 }
 
+void OclEngine::destroy()
+{
+
+}
+

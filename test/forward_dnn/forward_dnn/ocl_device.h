@@ -8,6 +8,7 @@ public:
     ~OclEngine();
 
     int create(cl_device_type deviceType, const char* platformName);
+    void destroy();
 
 private:
     bool checkPlatform(cl_platform_id platform, const char* preferredPlatform);
