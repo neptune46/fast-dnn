@@ -115,6 +115,8 @@ int forward_gpu(Mnist* mnist)
         return -1;
     }
 
+    engine.destroy();
+
     return 0;
 }
 
